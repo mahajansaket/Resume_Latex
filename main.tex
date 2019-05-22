@@ -1,0 +1,221 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+%\usepackage[showframe]{geometry}
+\usepackage[scale=0.8]{geometry}
+\geometry{a4paper}%, margin=1.5in}
+\usepackage{microtype}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+%\usepackage{hyperref}
+% adjust the page margins
+
+\usepackage{multicol}
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{4.1in}
+\addtolength{\topmargin}{-.475in}
+\addtolength{\textheight}{1.75in}
+
+
+% personal data
+
+\name{Saket}{Mahajan}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{5829 Hobart Street, Pittsburgh, PA 15213 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{6pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-23mm}
+
+\hglue0.00001pt\hfill
+\begin{center}
+\hglue0.00001pt\hfill
+\begin{tabular}{ c c c c c }
+\hglue0.00001pt\hfill
+ \faGlobe\enspace \href{https://www.smahajan.com}{smahajan.com} & \faEnvelopeO\enspace \href{mailto:smahajan@scu.edu}{smahajan@scu.edu} & \faGithub\enspace \href{https://www.github.com\\mahajansaket}{mahajansaket} &  \faMobile\enspace \href{tel:+16692147219}{669-214-7219} &  \faCodepen\enspace \href{www.codepen.io\\mahajansaket}{mahajansaket}\\  
+\end{tabular}
+\end{center}
+
+\section{EDUCATION}
+{\customcventry{Sept 2018 - Present}{Master of Science in Computer Science}{Santa Clara University}{Santa Clara, US}{}{ \emph{\textbf{Coursework:} Design Analysis and Algorithms, Computer Networks, Advanced Operating Systems, Web Architecture and Protocols}}}
+\vspace*{2mm}
+
+{\customcventry{July 2014 - May 2018}{Bachelor of Technology in Computer Science}{Vellore Institute of Technology}{Vellore, IN}{}{ \emph{\textbf{Coursework:} Embedded Systems, Software Engineering, Database systems, Data Warehousing and Mining, Internet Web Programming, Object-Oriented Programming}}}
+
+\section{KEY SKILLS}
+{\customcvproject{Programming Skills: \normalfont{C, C++, Java, HTML, CSS, MATLAB, Shell, R, LATEX, PHP, JavaScript, Linux}}{}{}}
+\vspace*{-4.5mm}
+{\customcvproject{Database: \normalfont{MySQL, MongoDB}}{}{}}
+{\customcvproject{Analytics: \normalfont{MATLAB, IBM SPSS Statistics, RStudio,  Google Analytics, Bing Analytics}}{}{}}
+  
+{\customcvproject{Tools: \normalfont{Android Studio, PhoneGap, Apache Cordova, Ionic, Visual Studio Code, Office 365, G Suite}}{}{}}
+\vspace*{-4.5mm}
+{\customcvproject{Cloud: \normalfont{IBM Cloud, AWS, Google Cloud Platform}}{}{}}
+\section{PROJECTS}
+
+{\customcvproject{Smart Home Hub}{Jan 2019 - March 2019}
+  {\begin{itemize}
+    \item Created a Smart Home Hub using ESP32 microcontroller, LCD screen and proximity sensor
+    \item Displays email, events, weather forecast and estimated time to arrival to your desired location on LCD display in addition to one’s personal website
+    \item Integrated with REST API of Google and OpenWeather to extract data such as Gmail, weather forecast, etc
+    \item Developed Android, iOS app using PhoneGap framework to control proximity sensor
+  \end{itemize}
+  }
+}
+\vspace{1.0mm}
+{\customcvproject{Beer Game Application}{Oct 2018 – Dec 2018}
+    {\begin{itemize}
+      \item Generated an application in Microsoft Visual Studio
+      \item Project aimed to demonstrate a beer distribution chain to help understand the dynamics of supply chain management
+      \item The main objective was to minimize the total cost for everyone in the supply chain by maintaining low stocks while managing to deliver all orders
+    \end{itemize}
+    }
+}
+\vspace{1.0mm}
+{\customcvproject{Designed a low power wireless sensor network}{Dec 2017 – May 2018}
+    {\begin{itemize}
+      \item Designed an algorithm by using shortest path routing algorithm and critical node monitoring
+      \item Reduced energy costs of Wireless Sensor Networks by 37\%
+    \end{itemize}
+    }
+\vspace{1.0mm}
+{\customcvproject{Smart Bed for Hospitals}{Jan 2017 – May 2017}
+    {\begin{itemize}
+      \item Designed a Smart Bed for Hospitals for monitoring patients
+      \item Used BeagleBone Black to design the Smart Bed for Hospitals
+      \item Reduced Smart Bed costs by 60\% by using an event trigger approach for power consumption.
+    \end{itemize}
+    }
+}
+\vspace{1.0mm}
+{\customcvproject{Secure Real-Time Vehicle Tracking}{July 2016 – Dec 2016}
+    {\begin{itemize}
+      \item Formed a cloud application in IBM Cloud for secure real-time vehicle GPS data transfer from vehicle to the monitoring system hosted in the cloud
+      \item Built an Android mobile application to record and transmit data to IBM Cloud
+    \end{itemize}
+    }
+}
+
+\section{EXPERIENCE}
+
+{\customcventry{May 2017 - July 2017}{Embedded Engineer Intern}{hIoTron}{Pune, IN}{}
+{\begin{itemize}
+  \item Designed an application for real-time data monitoring from Electric-Power Meter and Smart Locks 
+  \item Created a multi-purpose library by integrating libraries from Arduino UNO, Arduino MEGA, NodeMCU
+  \item Tested the multi-purpose library on every device in home automation
+\end{itemize}
+}
+
+}
+
+}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
