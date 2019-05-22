@@ -1,10 +1,6 @@
+%%Resume written in latex
 %% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
 
 \documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
@@ -45,26 +41,6 @@
 % personal data
 
 \name{Saket}{Mahajan}
-% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-%\address{5829 Hobart Street, Pittsburgh, PA 15213 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-%\phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
-% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
-% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
-% \extrainfo{}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
   
 \newcommand*{\customcventry}[7][.25em]{
   \begin{tabular}{@{}l} 
@@ -197,21 +173,6 @@
 }
 
 }
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
 %-----       letter       ---------------------------------------------------------
 
